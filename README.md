@@ -2,7 +2,7 @@
 
 > Two LinkedIn posts, turned into working, well-commented code:
 > a **Reliable RAG** pipeline with **Grade / Verify / Trace** gates, and a
-> **reference-free RAGAS** evaluation triad — built over Cambium **cnWave 60 GHz
+> **reference-free RAGAS** evaluation triad — built over **cnWave 60 GHz
 > wireless-mesh** documentation, a domain where a wrong answer has real
 > consequences.
 
@@ -186,7 +186,7 @@ library calls used — what each does, why, key parameters, and the gotchas.
 - *RAG Made Simple* by **Nir Diamant** — the "Reliable RAG" concept and contextual
   chunk headers.
 - **RAGAS** (`explodinggradients/ragas`) — the reference-free evaluation triad.
-- Corpus: Cambium Networks cnWave 60 GHz documentation.
+- Corpus: cnWave 60 GHz wireless-mesh documentation.
 
 ## License
 
