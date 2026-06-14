@@ -161,7 +161,7 @@ src/reliable_rag/
 eval/   questions.yaml · run_ragas.py · testset_gen.py
 app/    chainlit_app.py · streamlit_dashboard.py
 tests/  offline tests (chunkers, gates, graph) — no API keys needed
-docs/   the cnWave corpus (the demo dataset)
+docs/   the document corpus (the demo dataset)
 ```
 
 See [LEARN.md](LEARN.md) for the guided tour, [CHUNKING.md](CHUNKING.md) for why
