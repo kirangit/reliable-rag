@@ -11,11 +11,6 @@ for generation/grading) and **OpenAI** embeddings, with **Chroma + BM25** hybrid
 retrieval. Designed to be read top-to-bottom as a tutorial — start with
 [LEARN.md](LEARN.md).
 
-The two posts this implements:
-- *"I built a RAG system… then in production I hit the classic RAG problem — wrong
-  answers with no way to trace where the pipeline failed."* → **Reliable RAG**.
-- *"I always wondered how to systematically evaluate a RAG system…"* → **RAGAS**.
-
 ---
 
 ## Why this exists
