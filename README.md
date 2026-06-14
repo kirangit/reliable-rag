@@ -1,10 +1,8 @@
-# Reliable RAG + RAGAS — over the cnWave docs
+# Reliable RAG + RAGAS
 
 > Two LinkedIn posts, turned into working, well-commented code:
 > a **Reliable RAG** pipeline with **Grade / Verify / Trace** gates, and a
-> **reference-free RAGAS** evaluation triad — built over **cnWave 60 GHz
-> wireless-mesh** documentation, a domain where a wrong answer has real
-> consequences.
+> **reference-free RAGAS** evaluation triad.
 
 Built with **LangGraph + Claude** (`claude-opus-4-8` as judge, `claude-sonnet-4-6`
 for generation/grading) and **OpenAI** embeddings, with **Chroma + BM25** hybrid
@@ -86,7 +84,7 @@ copy .env.example .env             # then add ANTHROPIC_API_KEY + OPENAI_API_KEY
 
 ```bash
 reliable-rag ingest                      # build the Chroma index + chunk manifest
-reliable-rag ask "How do I recover an onboard E2E node?"
+reliable-rag ask "<q>"
 reliable-rag eval                        # RAGAS scorecard -> eval/results/
 chainlit run app/chainlit_app.py         # gated-chat demo (gates as live steps)
 streamlit run app/streamlit_dashboard.py # RAGAS dashboard + human feedback
@@ -186,7 +184,6 @@ library calls used — what each does, why, key parameters, and the gotchas.
 - *RAG Made Simple* by **Nir Diamant** — the "Reliable RAG" concept and contextual
   chunk headers.
 - **RAGAS** (`explodinggradients/ragas`) — the reference-free evaluation triad.
-- Corpus: cnWave 60 GHz wireless-mesh documentation.
 
 ## License
 
