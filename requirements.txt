@@ -1,0 +1,19 @@
+# Reliable RAG — dependencies
+# -------------------------------------------------------------------
+# Installing this file installs the `reliable_rag` package in editable mode,
+# which pulls in every CORE runtime dependency declared in pyproject.toml.
+#
+#   python -m venv .venv
+#   .venv\Scripts\activate            (Windows)   |   source .venv/bin/activate  (macOS/Linux)
+#   pip install -r requirements.txt
+#
+# The two demo UIs and the optional trace explorers are kept as *extras* so the
+# core pipeline + RAGAS eval resolve cleanly. Add them when you want them:
+#
+#   pip install -e ".[chat]"        # Chainlit gated-chat demo
+#   pip install -e ".[dashboard]"   # Streamlit RAGAS dashboard
+#   pip install -e ".[tracing]"     # local Phoenix UI / LangSmith
+#   pip install -e ".[dev]"         # pytest
+#   pip install -e ".[all]"         # everything above
+# -------------------------------------------------------------------
+-e .

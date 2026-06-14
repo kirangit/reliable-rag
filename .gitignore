@@ -1,0 +1,40 @@
+# --- secrets ---
+.env
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- reliable_rag runtime artifacts (regenerable; never committed) ---
+# NOTE: keep these patterns on their own lines — an inline `# comment` becomes
+# part of the pattern in .gitignore and silently breaks the rule.
+# vector store (rebuild with `reliable-rag ingest`)
+.chroma/
+# per-query trace logs
+runs/
+# 👍/👎 store
+feedback/
+# RAGAS scorecards (regenerate with `reliable-rag eval`)
+eval/results/
+
+# --- chainlit / streamlit / phoenix scratch ---
+.chainlit/.langchain.db
+.chainlit/translations/
+.files/
+phoenix.db
+.phoenix/
+
+# --- logs / scratch ---
+*.log
+
+# --- os ---
+.DS_Store
+Thumbs.db

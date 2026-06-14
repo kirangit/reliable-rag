@@ -1,0 +1,5 @@
+/* Reliable RAG — Chainlit UI tweaks.
+   Keep model-generated answer headings (#, ##) from rendering oversized. */
+h1 { font-size: 1.45rem !important; line-height: 1.3 !important; margin: 0.6rem 0 0.3rem !important; }
+h2 { font-size: 1.2rem  !important; line-height: 1.3 !important; margin: 0.5rem 0 0.3rem !important; }
+h3 { font-size: 1.05rem !important; line-height: 1.3 !important; margin: 0.4rem 0 0.2rem !important; }

@@ -1,0 +1,30 @@
+# Curated evaluation questions over the cnWave 60 GHz corpus.
+#
+# Reference-free by default (matches Post 2: no golden answers needed). The RAGAS
+# triad — Context Relevance, Faithfulness, Answer Relevance — judges these with
+# an LLM. To unlock reference-based metrics (e.g. context recall, factual
+# correctness) for any item, add a `ground_truth:` field under it.
+#
+#   - question: "..."
+#     ground_truth: "the expected answer"
+
+questions:
+  - question: "How do I recover an onboard E2E node?"
+  - question: "What are the Main port LED states on a V5000 during boot, and what does each mean?"
+  - question: "On a V3000, what does a green Left LED with a green Right LED indicate?"
+  - question: "What triggers cnWave Recovery Mode, and how do the LEDs behave?"
+  - question: "What is the difference between a bridge port and a relay port in cnWave packet flow?"
+  - question: "How does cnWave use IPv6 L2GRE tunneling for user traffic?"
+  - question: "How are broadcast and multicast packets handled at a POP node?"
+  - question: "What polarity rules does the E2E controller enforce for wireless links?"
+  - question: "What is a hybrid polarity and what is its effect on bandwidth?"
+  - question: "What are the PoP, DN, and CN node types in a cnWave network?"
+  - question: "What does the E2E controller's topology module manage?"
+  - question: "How does the controller assign parameters like polarity, channel, and Golay index?"
+  - question: "What are the recommended minimum RSSI and SNR for MCS 12?"
+  - question: "Which cnMaestro REST API endpoint lists devices, and how do I onboard a new device?"
+  - question: "What API path retrieves per-link statistics for 60 GHz cnWave?"
+  - question: "How do I run a topology scan on a device via the cnMaestro API?"
+  - question: "What are the steps to recover from an external E2E controller failure?"
+  - question: "What is the typical boot time for a V1000 compared to a V5000?"
+  - question: "When should I record a video of the LED sequence for support?"
