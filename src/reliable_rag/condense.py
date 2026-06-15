@@ -29,6 +29,9 @@ CONDENSE_SYSTEM = (
     "(e.g. 'it', 'that', 'the unit', 'how long does it take'). Rules:\n"
     "- Output ONLY the standalone question — no preamble, no answer.\n"
     "- If the latest message is already self-contained, return it unchanged.\n"
+    "- Resolve references, but do NOT add broad domain or product names that appear "
+    "throughout the corpus; such ubiquitous terms carry no discriminative signal and "
+    "pull retrieval off-target. Keep only words that narrow the search.\n"
     "- Stay faithful to the user's intent; keep it concise."
 )
 
