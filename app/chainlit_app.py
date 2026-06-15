@@ -43,6 +43,23 @@ def _grades_table(grades) -> str:
     return "\n".join(rows)
 
 
+def _retrieved_block(chunks) -> str:
+    """Raw retrieved chunks (pre-Grade): rank, id, score, location, text snippet."""
+    if not chunks:
+        return "_no chunks retrieved_"
+    out = [f"Retrieved **{len(chunks)}** candidate chunks (pre-Grade):", ""]
+    for i, c in enumerate(chunks, 1):
+        snippet = " ".join(c.text.split())  # collapse newlines/whitespace for a clean preview
+        if len(snippet) > 200:
+            snippet = snippet[:200].rstrip() + "…"
+        loc = c.source + (f" › {c.header_path}" if c.header_path else "")
+        out.append(f"**{i}. `{c.chunk_id}`** · score {c.score:.2f}")
+        out.append(f"*{loc}*")
+        out.append(f"> {snippet}")
+        out.append("")
+    return "\n".join(out)
+
+
 def _verify_block(verification) -> str:
     if verification is None:
         return "_verification skipped_"
@@ -83,7 +100,7 @@ async def _render_step(node: str, delta: dict) -> None:
     elif node == "retrieve":
         mode = "dense: vector only" if settings.retrieval_mode == "dense" else "hybrid: dense + BM25"
         async with cl.Step(name=f"① Retrieve ({mode})", type="retrieval") as step:
-            step.output = f"Retrieved {len(delta.get('retrieved', []))} candidate chunks."
+            step.output = _retrieved_block(delta.get("retrieved", []))
     elif node == "grade":
         grades = delta.get("grades", [])
         kept = sum(1 for g in grades if g.relevant)
