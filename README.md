@@ -82,6 +82,8 @@ pip install -e ".[all]"            # core + Chainlit + Streamlit + tracing + pyt
 copy .env.example .env             # then add ANTHROPIC_API_KEY + OPENAI_API_KEY
 ```
 
+> **Bring your own docs.** No corpus ships with the repo — drop your markdown into `docs/` (or point `DOCS_DIR` at a folder), then run `ingest` below.
+
 ```bash
 reliable-rag ingest                      # build the Chroma index + chunk manifest
 reliable-rag ask "<q>"
@@ -161,7 +163,7 @@ src/reliable_rag/
 eval/   questions.yaml · run_ragas.py · testset_gen.py
 app/    chainlit_app.py · streamlit_dashboard.py
 tests/  offline tests (chunkers, gates, graph) — no API keys needed
-docs/   the document corpus (the demo dataset)
+docs/   your markdown corpus (bring your own — see Quickstart)
 ```
 
 See [LEARN.md](LEARN.md) for the guided tour, [CHUNKING.md](CHUNKING.md) for why

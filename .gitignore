@@ -38,3 +38,6 @@ phoenix.db
 # --- os ---
 .DS_Store
 Thumbs.db
+
+# --- corpus: bring your own docs (not committed) ---
+docs/
